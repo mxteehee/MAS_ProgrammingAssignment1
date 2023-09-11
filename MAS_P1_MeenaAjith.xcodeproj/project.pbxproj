@@ -14,6 +14,10 @@
 		EB8CB4352AAF993E00086C39 /* MAS_P1_MeenaAjithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB4342AAF993E00086C39 /* MAS_P1_MeenaAjithTests.swift */; };
 		EB8CB43F2AAF993E00086C39 /* MAS_P1_MeenaAjithUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB43E2AAF993E00086C39 /* MAS_P1_MeenaAjithUITests.swift */; };
 		EB8CB4412AAF993E00086C39 /* MAS_P1_MeenaAjithUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB4402AAF993E00086C39 /* MAS_P1_MeenaAjithUITestsLaunchTests.swift */; };
+		EB8CB44F2AAF9C9900086C39 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EB8CB44E2AAF9C9900086C39 /* FirebaseAnalytics */; };
+		EB8CB4512AAF9C9900086C39 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EB8CB4502AAF9C9900086C39 /* FirebaseAuth */; };
+		EB8CB4532AAF9F9900086C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB8CB4522AAF9F9900086C39 /* GoogleService-Info.plist */; };
+		EB8CB4552AAFAE1500086C39 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB4542AAFAE1500086C39 /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		EB8CB43A2AAF993E00086C39 /* MAS_P1_MeenaAjithUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MAS_P1_MeenaAjithUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8CB43E2AAF993E00086C39 /* MAS_P1_MeenaAjithUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAS_P1_MeenaAjithUITests.swift; sourceTree = "<group>"; };
 		EB8CB4402AAF993E00086C39 /* MAS_P1_MeenaAjithUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAS_P1_MeenaAjithUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB8CB4522AAF9F9900086C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB8CB4542AAFAE1500086C39 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8CB44F2AAF9C9900086C39 /* FirebaseAnalytics in Frameworks */,
+				EB8CB4512AAF9C9900086C39 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +104,9 @@
 			children = (
 				EB8CB4232AAF993D00086C39 /* MAS_P1_MeenaAjithApp.swift */,
 				EB8CB4252AAF993D00086C39 /* ContentView.swift */,
+				EB8CB4542AAFAE1500086C39 /* WeatherView.swift */,
 				EB8CB4272AAF993E00086C39 /* Assets.xcassets */,
+				EB8CB4522AAF9F9900086C39 /* GoogleService-Info.plist */,
 				EB8CB4292AAF993E00086C39 /* Preview Content */,
 			);
 			path = MAS_P1_MeenaAjith;
@@ -143,6 +153,10 @@
 			dependencies = (
 			);
 			name = MAS_P1_MeenaAjith;
+			packageProductDependencies = (
+				EB8CB44E2AAF9C9900086C39 /* FirebaseAnalytics */,
+				EB8CB4502AAF9C9900086C39 /* FirebaseAuth */,
+			);
 			productName = MAS_P1_MeenaAjith;
 			productReference = EB8CB4202AAF993D00086C39 /* MAS_P1_MeenaAjith.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = EB8CB4172AAF993D00086C39;
+			packageReferences = (
+				EB8CB44D2AAF9C9900086C39 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EB8CB4212AAF993D00086C39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +250,7 @@
 			files = (
 				EB8CB42B2AAF993E00086C39 /* Preview Assets.xcassets in Resources */,
 				EB8CB4282AAF993E00086C39 /* Assets.xcassets in Resources */,
+				EB8CB4532AAF9F9900086C39 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8CB4552AAFAE1500086C39 /* WeatherView.swift in Sources */,
 				EB8CB4262AAF993D00086C39 /* ContentView.swift in Sources */,
 				EB8CB4242AAF993D00086C39 /* MAS_P1_MeenaAjithApp.swift in Sources */,
 			);
@@ -577,6 +596,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB8CB44D2AAF9C9900086C39 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB8CB44E2AAF9C9900086C39 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB8CB44D2AAF9C9900086C39 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EB8CB4502AAF9C9900086C39 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB8CB44D2AAF9C9900086C39 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EB8CB4182AAF993D00086C39 /* Project object */;
 }
