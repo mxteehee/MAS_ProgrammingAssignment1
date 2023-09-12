@@ -1,7 +1,7 @@
 # MAS_ProgrammingAssignment1
 
 ## Description
-WeatherCenter is an iOS application built using Swift on Xcode. It presents real-time temperature data based on the user's location, and pulls in the data from the OpenWeatherMap. It utilizes Core Location for location services and also Firebase for user sign-in functionalities.
+WeatherCenter is an iOS application built using Swift on Xcode. It presents real-time temperature data based on the user's location, and pulls in the data from the OpenWeatherMap API. It utilizes Core Location for location services and also Firebase for user sign-in functionalities.
 
 ## Installation
 1. Clone the repo
