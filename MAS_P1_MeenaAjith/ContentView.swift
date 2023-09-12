@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var userLoggedIn = false
+    @State private var authErr = ""
     
     var body: some View {
         if userLoggedIn {
@@ -70,6 +71,14 @@ struct ContentView: View {
                 }
                 .padding(.top)
                 .offset(y: 110)
+                
+                if authErr.count > 0 {
+                    Text(authErr)
+                        .padding()
+                        .border(.red, width: 4)
+                        .foregroundColor(.white)
+                        .offset(y: 140)
+                }
             }
             .frame(width: 350)
             .onAppear {
@@ -85,14 +94,14 @@ struct ContentView: View {
     func login() {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if error != nil {
-                print(error!.localizedDescription)
+                authErr = error!.localizedDescription
             }
         }
     }
     func register() {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if error != nil {
-                print(error!.localizedDescription)
+                authErr = error!.localizedDescription
             }
         }
     }
