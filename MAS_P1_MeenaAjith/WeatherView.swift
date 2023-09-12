@@ -38,7 +38,16 @@ struct WeatherView: View {
                 CityTextView(cityName: weatherModel.cityName)
                 MainWeather(image:weatherModel.iconName, temp:weatherModel.temperature, tempType: $tempType)
                 Spacer()
-            
+                
+                HStack(spacing:20) {
+                    WeatherDayView(dayofWeek: "MON", imageName: "cloud.sun.fill")
+                    WeatherDayView(dayofWeek: "TUE", imageName: "sun.max.fill")
+                    WeatherDayView(dayofWeek: "WED", imageName:"cloud.sun.fill")
+                    WeatherDayView(dayofWeek: "THURS", imageName: "cloud.heavyrain.fill")
+                    WeatherDayView(dayofWeek: "FRI", imageName:"cloud.sun.fill")
+                }
+                Spacer()
+                
                 let temps = ["Fahrenheit", "Celsius"]
                 Picker("Temperature", selection:$tempType, content:{
                     ForEach(temps, id: \.self, content: { temp in
@@ -58,6 +67,22 @@ struct WeatherView: View {
             LinearGradient(colors: [top, bottom], startPoint: .topLeading,
                            endPoint:.bottomTrailing)
             .edgesIgnoringSafeArea(.all)
+        }
+    }
+    struct WeatherDayView: View {
+        var dayofWeek:String
+        var imageName:String
+            
+        var body: some View{
+            VStack{
+                Text(dayofWeek)
+                    .font(.system(size:16, weight:.medium,design:.default))
+                    .foregroundColor(.white)
+                    
+                Image(systemName:imageName).renderingMode(.original).resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:40,height:40)
+            }
         }
     }
     struct CityTextView: View {
