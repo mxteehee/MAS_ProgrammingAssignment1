@@ -18,6 +18,10 @@
 		EB8CB4512AAF9C9900086C39 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EB8CB4502AAF9C9900086C39 /* FirebaseAuth */; };
 		EB8CB4532AAF9F9900086C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB8CB4522AAF9F9900086C39 /* GoogleService-Info.plist */; };
 		EB8CB4552AAFAE1500086C39 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB4542AAFAE1500086C39 /* WeatherView.swift */; };
+		EB8CB45B2AAFC63800086C39 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB45A2AAFC63800086C39 /* WeatherAPI.swift */; };
+		EB8CB45D2AAFC69600086C39 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB45C2AAFC69600086C39 /* WeatherButton.swift */; };
+		EB8CB45F2AAFC6E400086C39 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB45E2AAFC6E400086C39 /* WeatherManager.swift */; };
+		EB8CB4612AAFC77100086C39 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CB4602AAFC77100086C39 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,11 @@
 		EB8CB4402AAF993E00086C39 /* MAS_P1_MeenaAjithUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAS_P1_MeenaAjithUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EB8CB4522AAF9F9900086C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB8CB4542AAFAE1500086C39 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		EB8CB45A2AAFC63800086C39 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		EB8CB45C2AAFC69600086C39 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
+		EB8CB45E2AAFC6E400086C39 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		EB8CB4602AAFC77100086C39 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		EB8CB4642AAFE5AF00086C39 /* MAS-P1-MeenaAjith-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MAS-P1-MeenaAjith-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +111,14 @@
 		EB8CB4222AAF993D00086C39 /* MAS_P1_MeenaAjith */ = {
 			isa = PBXGroup;
 			children = (
+				EB8CB4642AAFE5AF00086C39 /* MAS-P1-MeenaAjith-Info.plist */,
 				EB8CB4232AAF993D00086C39 /* MAS_P1_MeenaAjithApp.swift */,
 				EB8CB4252AAF993D00086C39 /* ContentView.swift */,
+				EB8CB45E2AAFC6E400086C39 /* WeatherManager.swift */,
+				EB8CB45C2AAFC69600086C39 /* WeatherButton.swift */,
+				EB8CB45A2AAFC63800086C39 /* WeatherAPI.swift */,
 				EB8CB4542AAFAE1500086C39 /* WeatherView.swift */,
+				EB8CB4602AAFC77100086C39 /* WeatherModel.swift */,
 				EB8CB4272AAF993E00086C39 /* Assets.xcassets */,
 				EB8CB4522AAF9F9900086C39 /* GoogleService-Info.plist */,
 				EB8CB4292AAF993E00086C39 /* Preview Content */,
@@ -275,9 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8CB45F2AAFC6E400086C39 /* WeatherManager.swift in Sources */,
 				EB8CB4552AAFAE1500086C39 /* WeatherView.swift in Sources */,
+				EB8CB45B2AAFC63800086C39 /* WeatherAPI.swift in Sources */,
+				EB8CB4612AAFC77100086C39 /* WeatherModel.swift in Sources */,
 				EB8CB4262AAF993D00086C39 /* ContentView.swift in Sources */,
 				EB8CB4242AAF993D00086C39 /* MAS_P1_MeenaAjithApp.swift in Sources */,
+				EB8CB45D2AAFC69600086C39 /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,8 +454,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MAS_P1_MeenaAjith/Preview Content\"";
+				DEVELOPMENT_TEAM = SF9C87BTA6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MAS-P1-MeenaAjith-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Access to your current location is necessary to fetch weather data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,8 +485,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MAS_P1_MeenaAjith/Preview Content\"";
+				DEVELOPMENT_TEAM = SF9C87BTA6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MAS-P1-MeenaAjith-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Access to your current location is necessary to fetch weather data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

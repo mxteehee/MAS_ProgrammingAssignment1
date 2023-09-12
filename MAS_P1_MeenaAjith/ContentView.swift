@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         if userLoggedIn {
-            WeatherView(userLoggedIn: $userLoggedIn)
+            WeatherView(userLoggedIn: $userLoggedIn, weatherModel: WeatherModel(weatherManager: WeatherManager()))
         } else {
             content
         }
